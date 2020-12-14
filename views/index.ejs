@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>LeanCloud评论管理</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="shortcut icon" href="<%= favicon %>">
+</head>
+
+<body>
+
+    <div class="sign-in-wrap">
+        <p class="title">LeanCloud评论管理</p>
+        <form method="post" action="/login" class="gh-signin">
+            <input tabindex="1" name="username" placeholder="管理员邮箱" autofocus="" type="text" class="gh-input">
+            <input tabindex="2" name="password" placeholder="密码" type="password" class="password gh-input ember-view">
+
+            <input tabindex="3" type="submit" class="login-button" value="登录">
+        </form>
+        <div class="footer">
+            <p>Modified<a href="https://www.antmoe.com">By Dreamy.TZK</a></p>
+            <p><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer"><%= ICP %></a> </p>
+            <%- INFO %>
+        </div>
+        <script>
+            console.log('\n' + ' %c 美不胜收的优雅后台 ' + ' ' + ' %c https://www.antmoe.com/posts/2380732b/index.html ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
+        </script>
+</body>
+
+</html>
