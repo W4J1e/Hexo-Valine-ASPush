@@ -123,7 +123,7 @@ exports.notice = (comment) => {
         console.warn("微信提醒失败:", error.message);
       });
   }
-  // QQ提醒
+  // **********************************************主要维护QQ提醒*************************************************
   if (process.env.QMSG_KEY != null) {
     if (process.env.QQ_SHAKE != null) {
       axios
@@ -147,11 +147,10 @@ exports.notice = (comment) => {
     if (process.env.QQ != null) {
       qq = "&qq=" + process.env.QQ;
     }
-    const scContent = `[CQ:face,id=119]您的 ${
+    const scContent = `您的 ${
       process.env.SITE_NAME
     } 上有新评论了！
-[CQ:face,id=183]${name} 发表评论：
-[CQ:face,id=77][CQ:face,id=77][CQ:face,id=77][CQ:face,id=77][CQ:face,id=77]
+${name} 发表评论：
 ${$(
   text
     .replace(/  <img.*?src="(.*?)".*?>/g, "\n[图片]$1\n")
@@ -160,8 +159,7 @@ ${$(
   .text()
   .replace(/\n+/g, "\n")
   .replace(/\n+$/g, "")}
-[CQ:face,id=76][CQ:face,id=76][CQ:face,id=76][CQ:face,id=76][CQ:face,id=76]
-[CQ:face,id=169]${url + "#" + comment.get("objectId")}`;
+链接：${url + "#" + comment.get("objectId")}`;
     axios
       .get(
         `https://qmsg.zendee.cn:443/send/${
