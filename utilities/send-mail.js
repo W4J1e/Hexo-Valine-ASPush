@@ -161,7 +161,6 @@ ${$(
   .replace(/\n+/g, "\n")
   .replace(/\n+$/g, "")}
 [】]
-邮箱： ${email} 
 链接：${url + "#" + comment.get("objectId")}`;
     axios
       .get(
