@@ -147,10 +147,10 @@ exports.notice = (comment) => {
     if (process.env.QQ != null) {
       qq = "&qq=" + process.env.QQ;
     }
-    const scContent = `/lyj您的 ${
+    const scContent = `/lyj 您的 ${
       process.env.SITE_NAME
     } 上有新评论啦！
-昵称： ${name} 
+${name} 发表评论：
 【 ${$(
   text
     .replace(/  <img.*?src="(.*?)".*?>/g, "\n[图片]$1\n")
