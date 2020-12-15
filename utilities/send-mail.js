@@ -151,7 +151,6 @@ exports.notice = (comment) => {
       process.env.SITE_NAME
     } 上有新评论啦！
 昵称： ${name} 
-邮箱：${email} 
 [【]
 ${$(
   text
