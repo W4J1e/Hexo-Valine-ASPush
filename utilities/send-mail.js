@@ -147,20 +147,18 @@ exports.notice = (comment) => {
     if (process.env.QQ != null) {
       qq = "&qq=" + process.env.QQ;
     }
-    const scContent = `[/lyj]您的 ${
+    const scContent = `/lyj您的 ${
       process.env.SITE_NAME
     } 上有新评论啦！
 昵称： ${name} 
-[【]
-${$(
+【 ${$(
   text
     .replace(/  <img.*?src="(.*?)".*?>/g, "\n[图片]$1\n")
     .replace(/<br>/g, "\n")
 )
   .text()
   .replace(/\n+/g, "\n")
-  .replace(/\n+$/g, "")}
-[】]
+  .replace(/\n+$/g, "")} 】
 链接：${url + "#" + comment.get("objectId")}`;
     axios
       .get(
