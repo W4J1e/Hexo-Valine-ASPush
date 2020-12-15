@@ -130,7 +130,7 @@ exports.notice = (comment) => {
         .get(
           `https://qmsg.zendee.cn:443/send/${
             process.env.QMSG_KEY
-          }?msg=${encodeURIComponent("[CQ:shake]")}`
+          }?msg=${encodeURIComponent("[没想到吧！戳一戳没用]")}`
         )
         .then(function (response) {
           if (response.status === 200 && response.data.success === true) {
@@ -147,10 +147,11 @@ exports.notice = (comment) => {
     if (process.env.QQ != null) {
       qq = "&qq=" + process.env.QQ;
     }
-    const scContent = `您的 ${
+    const scContent = `[/lyj]您的 ${
       process.env.SITE_NAME
-    } 上有新评论了！
-${name} 发表评论：
+    } 上有新评论啦！
+昵称： ${name} 
+[【]
 ${$(
   text
     .replace(/  <img.*?src="(.*?)".*?>/g, "\n[图片]$1\n")
@@ -159,6 +160,8 @@ ${$(
   .text()
   .replace(/\n+/g, "\n")
   .replace(/\n+$/g, "")}
+[】]
+邮箱： ${mail} 
 链接：${url + "#" + comment.get("objectId")}`;
     axios
       .get(
