@@ -56,11 +56,11 @@ exports.notice = (comment) => {
   const main_color = process.env.MAIN_COLOR ? process.env.MAIN_COLOR : "orange";
   const main_img = process.env.MAIN_IMG
     ? process.env.MAIN_IMG
-    : "https://ae01.alicdn.com/kf/U5bb04af32be544c4b41206d9a42fcacfd.jpg";
+    : "https://cdn.jsdelivr.net/gh/w4j1e/blog@master/img/bg.jpg";
 
   if (!process.env.DISABLE_EMAIL) {
     const emailSubject =
-      "📌 哇！「" + process.env.SITE_NAME + "」上有人回复了你啦！快点我！💦";
+      "📌 哇！「" + process.env.SITE_NAME + "」上有人回复了你啦！💦";
     const emailContent = noticeTemplate({
       siteName: process.env.SITE_NAME,
       siteUrl: process.env.SITE_URL,
@@ -192,7 +192,7 @@ exports.send = (currentComment, parentComment) => {
   const main_color = process.env.MAIN_COLOR ? process.env.MAIN_COLOR : "orange";
   const main_img = process.env.MAIN_IMG
     ? process.env.MAIN_IMG
-    : "https://ae01.alicdn.com/kf/U5bb04af32be544c4b41206d9a42fcacfd.jpg";
+    : "https://cdn.jsdelivr.net/gh/w4j1e/blog@master/img/bg.jpg";
   const emailContent = sendTemplate({
     siteName: process.env.SITE_NAME,
     siteUrl: process.env.SITE_URL,
