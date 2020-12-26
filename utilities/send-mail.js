@@ -52,7 +52,8 @@ exports.notice = (comment) => {
   const name = comment.get("nick");
   const text = comment.get("comment");
   const url = process.env.SITE_URL + comment.get("url");
-  const comment_id = process.env.COMMENT ? process.env.COMMENT : "";
+  //const comment_id = process.env.COMMENT ? process.env.COMMENT : "";
+  const comment_id = process.env.COMMENT ? "#" + comment.get("objectId") : "";
   const main_color = process.env.MAIN_COLOR ? process.env.MAIN_COLOR : "orange";
   const main_img = process.env.MAIN_IMG
     ? process.env.MAIN_IMG
