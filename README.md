@@ -5,7 +5,7 @@
 
 2020.12.31新增说明：
 
-由于valine本身的缺陷和Leancloud流控等原因，本人目前用有后端的waline评论系统取代了valine，且官方原生支持推送，部署在其它平台可以保障推送即时到达。详情请[戳这里](https://w4j1e.xyz/posts/waline.html)。
+由于valine本身的缺陷和Leancloud流控等原因，本人目前用有后端的waline评论系统取代了valine，且官方原生支持推送，部署在其它平台可以保障推送即时到达。详情请[戳这里](https://www.hin.cool/posts/waline.html)。
 
 ## 主要解决问题：
 
